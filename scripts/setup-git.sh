@@ -169,8 +169,6 @@ gstatus() {
     git log --oneline -5
 }
 
-# Export functions
-export -f qcommit qpush newbranch delbranch gstatus
 EOF
     
     chmod +x "$HOME/.git-helpers.sh"

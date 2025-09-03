@@ -66,11 +66,10 @@ install_macos_deps() {
         "fd"
         "fzf"
         "bat"
-        "exa"
+        "eza"
         "node"
         "python@3.11"
         "pyenv"
-        "colorls"
     )
     
     for package in "${packages[@]}"; do
@@ -84,9 +83,16 @@ install_macos_deps() {
     
     # Install fonts
     print_status "Installing Nerd Fonts..."
-    brew tap homebrew/cask-fonts
     brew install --cask font-meslo-lg-nerd-font font-fira-code-nerd-font
     
+    # Install colorls via Ruby gem
+    if ! command_exists colorls; then
+        print_status "Installing colorls via Ruby gem..."
+        gem install colorls
+    else
+        print_status "colorls already installed"
+    fi
+
     print_success "macOS dependencies installed successfully"
 }
 
