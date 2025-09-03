@@ -15,13 +15,13 @@ This repository contains all the configuration files and setup scripts for repli
 Run this command on a new machine to set up everything:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourusername/config/main/setup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/samikpal/config/main/setup.sh | bash
 ```
 
 Or clone and run manually:
 
 ```bash
-git clone https://github.com/yourusername/config.git
+git clone https://github.com/samikpal/config.git
 cd config
 chmod +x setup.sh
 ./setup.sh
